@@ -36,5 +36,10 @@ R1,R2,R3.
 |hostname R1      |hostname R2      |hostname R3      |
 |interface gigabitethernet 0/0      |interface gigabitethernet 0/0      |interface gigabitethernet 0/0      |
 |no shutdown      |no shutdown      |no shutdown      |
-|hostname R1      |hostname R2      |hostname R3      |
-|hostname R1      |hostname R2      |hostname R3      |
+|ip address 10.10.11.1 255.255.255.0      |ip address 10.10.12.1 255.255.255.0      |ip address 10.10.13.1 255.255.255.0      |
+|exit      |exit     |exit      |
+|interface gigabitethernet 0/1      |interface gigabitethernet 0/1    |interface gigabitethernet 0/1      |
+|no shutdown      |no shutdown      |no shutdown      |
+|ip address 192.168.11.1 255.255.255.0      |ip address 192.168.12.1 255.255.255.0     |ip address 192.168.13.1 255.255.255.0      |
+|exit      |exit     |exit      |
+|ip route 0.0.0.0 0.0.0.0 10.10.11.254|ip route 0.0.0.0 0.0.0.0 10.10.11.254     |ip route 0.0.0.0 0.0.0.0 10.10.11.254     |
