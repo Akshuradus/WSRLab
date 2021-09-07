@@ -18,8 +18,23 @@ R1,R2,R3.
 обращении клиента к mycorp.ru открывался работающий
 инстанс. Приорететы - SRV1, затем SRV2, затем SRV3.
 
+| Region 1              | Region 2              | Region 3              | Cloud services |
+| -------------         | -------------         | -------------         | -------------  |
+|R1 - 10.10.11.1/24     |R2 - 10.10.12.1/24     |R3 - 10.10.13.1/24     |Load Balancer - 10.31.14.127|
+|r1.region1.kp11cloud.ru|r2.region2.kp11cloud.ru|r3.region3.kp11cloud.ru|DNS - 10.31.14.126          |
+|GW - 10.10.11.254      |GW - 10.10.11.254      |GW - 10.10.11.254      |Application DNS - mycorp.ru |
+
+
 ![1](https://user-images.githubusercontent.com/79700810/132322342-9c6db933-44b5-4372-a114-7c90af87af79.png)
 --
 # Базовая Конфигурация R1, R2, R3
 
-
+| R1              | R2             |R3             | 
+| -------------         | -------------         | -------------         |
+|en      |en      |en      |
+|conf t|conf t|conf t|
+|hostname R1      |hostname R2      |hostname R3      |
+|interface gigabitethernet 0/0      |interface gigabitethernet 0/0      |interface gigabitethernet 0/0      |
+|no shutdown      |no shutdown      |no shutdown      |
+|hostname R1      |hostname R2      |hostname R3      |
+|hostname R1      |hostname R2      |hostname R3      |
