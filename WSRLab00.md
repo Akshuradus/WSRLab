@@ -20,4 +20,6 @@ R1,R2,R3.
 
 ![1](https://user-images.githubusercontent.com/79700810/132322342-9c6db933-44b5-4372-a114-7c90af87af79.png)
 --
+# Базовая Конфигурация R1, R2, R3
+
 
