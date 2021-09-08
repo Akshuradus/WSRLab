@@ -113,7 +113,6 @@ R1,R2,R3.
 |access-list 1 permit 192.168.11.0 0.0.0.255    |access-list 1 permit 192.168.12.0 0.0.0.255     |access-list 1 permit 192.168.13.0 0.0.0.255  |
 |ip nat inside source list 1 interface Gi0/0 overload    |ip nat inside source list 1 interface Gi0/0 overload     |ip nat inside source list 1 interface Gi0/0 overload |
 |!    |!     |!  |
-|ip nat inside source static tcp 192.168.11.2 80 10.10.11.1 80    |ip nat inside source static tcp 192.168.12.2 80 10.10.12.1 80     |
-ip nat inside source static tcp 192.168.13.2 80 10.10.13.1 80  |
+|ip nat inside source static tcp 192.168.11.2 80 10.10.11.1 80    |ip nat inside source static tcp 192.168.12.2 80 10.10.12.1 80     | ip nat inside source static tcp 192.168.13.2 80 10.10.13.1 80  |
 
 
