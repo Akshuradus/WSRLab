@@ -116,3 +116,16 @@ R1,R2,R3.
 |ip nat inside source static tcp 192.168.11.2 80 10.10.11.1 80    |ip nat inside source static tcp 192.168.12.2 80 10.10.12.1 80     | ip nat inside source static tcp 192.168.13.2 80 10.10.13.1 80  |
 
 
+# Базовая Конфигурация SRV1, SRV2, SRV3
+
+| SRV1              | SRV2             |SRV3             | 
+| -------------         | -------------         | -------------         |
+| hostnamectl set-hostname SRV1            | hostnamectl set-hostname SRV2             |hostnamectl set-hostname SRV3           | 
+| nmcli connection modify ens3 conn.autoconnect yes conn.interface-name ens3 ipv4.method manual ipv4.addresses '192.168.11.2/24' ipv4.dns 10.31.14.126 ipv4.gateway 192.168.11.1             | nmcli connection modify ens3 conn.autoconnect yes conn.interface-name ens3 ipv4.method manual ipv4.addresses '192.168.12.2/24' ipv4.dns 10.31.14.126 ipv4.gateway 192.168.12.1             |nmcli connection modify ens3 conn.autoconnect yes conn.interface-name ens3 ipv4.method manual ipv4.addresses '192.168.13.2/24' ipv4.dns 10.31.14.126 ipv4.gateway 192.168.13.1             | 
+| dnf install -y epel-release             | dnf install -y epel-release             |dnf install -y epel-release             | 
+| dnf install -y nginx             | dnf install -y nginx             |dnf install -y nginx            | 
+| systemctl enable --now nginx             | systemctl enable --now nginx             |systemctl enable --now nginx             | 
+| firewall-cmd --zone=trusted --add-interface=ens3 --permanent            | firewall-cmd --zone=trusted --add-interface=ens3 --permanent             |firewall-cmd --zone=trusted --add-interface=ens3 --permanent             | 
+| firewall-cmd --reload             |firewall-cmd --reload             |firewall-cmd --reload             | 
+| echo SRV1 > /usr/share/nginx/html/index.html             | echo SRV2 > /usr/share/nginx/html/index.html             |echo SRV3 > /usr/share/nginx/html/index.html            | 
+| systemctl reload nginx             | systemctl reload nginx             |systemctl reload nginx             | 
