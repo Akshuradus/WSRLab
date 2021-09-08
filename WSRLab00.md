@@ -46,3 +46,17 @@ R1,R2,R3.
 
 # Настройка GRE R1, R2, R3
 
+| R1              | R2             |R3             | 
+| -------------         | -------------         | -------------         |
+|interface Tunne 1     |interface Tunne1     |interface Tunne2    |
+|ip address 172.16.1.1 255.255.255.0|ip address 172.16.1.2 255.255.255.0|ip address 172.16.2.2 255.255.255.0|
+|tunnel mode gre ip|tunnel mode gre ip|tunnel mode gre ip|
+|tunnel source gigabitEthernet 0/0|tunnel source gigabitEthernet 0/0|tunnel source gigabitEthernet 0/0|
+|tunnel destination 10.10.12.1|tunnel destination 10.10.11.1|tunnel destination 10.10.11.1|
+|exit|exit|exit|
+|interface Tunne 2     |interface Tunne3     |interface Tunne3     |
+|ip address 172.16.2.1 255.255.255.0|ip address 172.16.3.1 255.255.255.0|ip address 172.16.3.2 255.255.255.0|
+|tunnel mode gre ip|tunnel mode gre ip|tunnel mode gre ip|
+|tunnel source gigabitEthernet 0/0|tunnel source gigabitEthernet 0/0|tunnel source gigabitEthernet 0/0|
+|tunnel destination 10.10.13.1|tunnel destination 10.10.13.1|tunnel destination 10.10.12.1|
+|exit|exit|exit|
