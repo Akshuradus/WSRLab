@@ -129,3 +129,23 @@ R1,R2,R3.
 | firewall-cmd --reload             |firewall-cmd --reload             |firewall-cmd --reload             | 
 | echo SRV1 > /usr/share/nginx/html/index.html             | echo SRV2 > /usr/share/nginx/html/index.html             |echo SRV3 > /usr/share/nginx/html/index.html            | 
 | systemctl reload nginx             | systemctl reload nginx             |systemctl reload nginx             | 
+
+# Настройка Load Balancer
+
+ssh root@10.31.14.127
+
+vim /ets/nginx/nginx.conf
+
+upstream backend {
+	server r1.region1.kp11cloud.ru fail_timeout=10;
+	server r2.region2.kp11cloud.ru fail_timeout=10;
+	server r3.region3.kp11cloud.ru fail_timeout=10;
+}
+
+server {
+	listen 80 default_server;
+	server_name mycorp.ru;
+	location{
+		proxy_pass http://backend ;
+	}
+}
