@@ -60,3 +60,18 @@ R1,R2,R3.
 |tunnel source gigabitEthernet 0/0|tunnel source gigabitEthernet 0/0|tunnel source gigabitEthernet 0/0|
 |tunnel destination 10.10.13.1|tunnel destination 10.10.13.1|tunnel destination 10.10.12.1|
 |exit|exit|exit|
+
+
+# Настройка BGP R1, R2, R3
+
+
+| R1              | R2             |R3             | 
+| -------------         | -------------         | -------------         |
+|router bgp 65000    |router bgp 65001     |router bgp 65002   |
+|network 192.168.11.0 mask 255.255.255.0    |network 192.168.12.0 mask 255.255.255.0     |network 192.168.13.0 mask 255.255.255.0   |
+|network 172.16.1.0 mask 255.255.255.0    |network 172.16.1.0 mask 255.255.255.0     |network 172.16.1.0 mask 255.255.255.0   |
+|network 172.16.2.0 mask 255.255.255.0    |network 172.16.3.0 mask 255.255.255.0     |network 172.16.3.0 mask 255.255.255.0   |
+|neighbor 172.16.1.2 remote-as 65001    |neighbor 172.16.1.1 remote-as 65000    |neighbor 172.16.1.1 remote-as 65000   |
+|neighbor 172.16.2.2 remote-as 65002   |neighbor 172.16.3.2 remote-as 65002    |neighbor 172.16.2.2 remote-as 65001   |
+|exit    |exit    |exit   |
+
