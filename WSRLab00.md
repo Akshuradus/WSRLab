@@ -136,7 +136,7 @@ ssh root@10.31.14.127
 
 vim /ets/nginx/nginx.conf
 
-```jsx
+```nginx
 upstream backend {
 	server r1.region1.kp11cloud.ru fail_timeout=10;
 	server r2.region2.kp11cloud.ru fail_timeout=10;
@@ -151,12 +151,27 @@ server {
 	}
 }
 ```
-systemctl reload nginx[R1.txt](https://github.com/storm39mad/WSRLab/files/7126560/R1.txt)
+systemctl reload nginx
+
+# Проверка на CLI
+
+![image](https://user-images.githubusercontent.com/79700810/132461625-235e66a2-0b45-48b1-9422-109148f7ea5c.png)
+![image](https://user-images.githubusercontent.com/79700810/132461924-08a4a4d2-a80f-452d-9672-51d83ebf551c.png)
+![image](https://user-images.githubusercontent.com/79700810/132461762-b0a86333-8920-41dd-85f6-09e91241577a.png)
+
+
+[R1.txt](https://github.com/storm39mad/WSRLab/files/7126560/R1.txt)
+
 [R2.txt](https://github.com/storm39mad/WSRLab/files/7126561/R2.txt)
+
 [R3.txt](https://github.com/storm39mad/WSRLab/files/7126562/R3.txt)
+
 [SRV1.txt](https://github.com/storm39mad/WSRLab/files/7126563/SRV1.txt)
+
 [SRV2.txt](https://github.com/storm39mad/WSRLab/files/7126564/SRV2.txt)
+
 [SRV3.txt](https://github.com/storm39mad/WSRLab/files/7126565/SRV3.txt)
+
 [CLI.txt](https://github.com/storm39mad/WSRLab/files/7126566/CLI.txt)
 
 
