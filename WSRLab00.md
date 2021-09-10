@@ -159,19 +159,23 @@ systemctl reload nginx
 ![image](https://user-images.githubusercontent.com/79700810/132461924-08a4a4d2-a80f-452d-9672-51d83ebf551c.png)
 ![image](https://user-images.githubusercontent.com/79700810/132461762-b0a86333-8920-41dd-85f6-09e91241577a.png)
 
+# File
 
-[R1.txt](https://github.com/storm39mad/WSRLab/files/7126560/R1.txt)
+| R1                    | R2                    | R3                    | SRV1                  |SRV2                   |SRV3                   |CLI                   |
+| -------------         | -------------         | -------------         | -------------         | -------------         | -------------         | -------------        |
+| [R1.txt](https://github.com/storm39mad/WSRLab/files/7126560/R1.txt)                      | [R2.txt](https://github.com/storm39mad/WSRLab/files/7126561/R2.txt)                      | [R3.txt](https://github.com/storm39mad/WSRLab/files/7126562/R3.txt)                      | [SRV1.txt](https://github.com/storm39mad/WSRLab/files/7126563/SRV1.txt)                      | [SRV2.txt](https://github.com/storm39mad/WSRLab/files/7126564/SRV2.txt)                      | [SRV3.txt](https://github.com/storm39mad/WSRLab/files/7126565/SRV3.txt)                      |  [CLI.txt](https://github.com/storm39mad/WSRLab/files/7126566/CLI.txt)                    |
 
-[R2.txt](https://github.com/storm39mad/WSRLab/files/7126561/R2.txt)
 
-[R3.txt](https://github.com/storm39mad/WSRLab/files/7126562/R3.txt)
 
-[SRV1.txt](https://github.com/storm39mad/WSRLab/files/7126563/SRV1.txt)
 
-[SRV2.txt](https://github.com/storm39mad/WSRLab/files/7126564/SRV2.txt)
 
-[SRV3.txt](https://github.com/storm39mad/WSRLab/files/7126565/SRV3.txt)
 
-[CLI.txt](https://github.com/storm39mad/WSRLab/files/7126566/CLI.txt)
+
+
+
+
+
+
+
 
 
